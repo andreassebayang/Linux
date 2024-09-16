@@ -43,10 +43,11 @@ groups namauser
 
 ```bash
 ls -l /usr/bin/sudo
+```
+
 > [!NOTE]
 > It should be:
 > -rwsr-xr-x 1 root root /usr/bin/sudo
-```
 
 9. Try login with the New user
 
@@ -85,5 +86,4 @@ ctrl + x and y
 
 ```bash
 systemctl restart sshd atau sshd.service
-<<<<<<< HEAD
 ```
