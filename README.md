@@ -37,8 +37,7 @@ It should be:
 1. Edit the configuration file of SSH
    sudo nano /etc/ssh/sshd_config
 
-2. Find and Edit the line of:
-   //change from Yes to No
+2. Find and Edit the line of: change from Yes to No
    PermitRootLogin no
 
 3. Adding New Line
