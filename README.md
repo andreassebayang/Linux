@@ -4,8 +4,7 @@
 
 1. Login to Server or Console
 2. Chcek Sudo already installed
-
-````bash
+```bash
 which sudo
 3. Installation Sudo
 ```bash
@@ -49,4 +48,3 @@ ctrl + x and y
 5. Restart the Service SSH
 ```bash
 systemctl restart sshd atau sshd.service
-````
