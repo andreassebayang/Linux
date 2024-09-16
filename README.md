@@ -1,6 +1,6 @@
 # Linux
 
-# Create New User
+## Create New User
 
 1. Login to Server or Console
 
@@ -25,6 +25,7 @@
 8. Check the permission of the Sudo file
    ls -l /usr/bin/sudo
 
+[!NOTE]
 It should be:
 -rwsr-xr-x 1 root root /usr/bin/sudo
 
@@ -32,7 +33,7 @@ It should be:
    su - namauser
    sudo ls /root
 
-# Adding Config to SSH for the New User
+## Adding Config to SSH for the New User
 
 1. Edit the configuration file of SSH
    sudo nano /etc/ssh/sshd_config
