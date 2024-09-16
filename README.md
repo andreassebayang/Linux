@@ -4,8 +4,13 @@
 
 1. Login to Server or Console
 2. Chcek Sudo already installed
+   <<<<<<< HEAD
 
-```bash
+=======
+
+> > > > > > > 56ab8a0ebca751474544e663e56d40203e47156e
+
+````bash
 which sudo
 ```
 
@@ -85,4 +90,9 @@ ctrl + x and y
 
 ```bash
 systemctl restart sshd atau sshd.service
-```
+<<<<<<< HEAD
+````
+
+=======
+
+> > > > > > > 56ab8a0ebca751474544e663e56d40203e47156e
