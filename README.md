@@ -87,3 +87,38 @@ ctrl + x and y
 ```bash
 systemctl restart sshd atau sshd.service
 ```
+
+# SSH Config
+
+1. Limitation access for Sudo Users: to Increase the Security
+
+```bash
+sudo visudo
+```
+
+and adding this command line:
+nameuser ALL=(ALL:ALL) /usr/bin/apt-get, /usr/bin/systemctl
+
+> [!NOTE]
+> This will restrict the user to only using sudo for apt-get and systemctl commands.
+
+2. Restrict Root and Allow Sudo User from SSH
+
+```bash
+PermitRootLogin no
+AllowUsers NameUser
+```
+
+3. Audit and Logging: ACtivate audit to monitor user activity.
+
+```bash
+sudo apt-get install auditd
+sudo systemctl enabled auditd
+sudo systemctl start auditd
+```
+
+4. Restart SSH Service
+
+```bash
+sudo systemctl restart sshd or sshd.service
+```
