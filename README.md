@@ -104,8 +104,15 @@ nameuser ALL=(ALL:ALL) /usr/bin/apt-get, /usr/bin/systemctl
 
 2. Restrict Root and Allow Sudo User from SSH
 
+Edit line for root access
+
 ```bash
 PermitRootLogin no
+```
+
+Adding new line
+
+```bash
 AllowUsers NameUser
 ```
 
@@ -117,7 +124,29 @@ sudo systemctl enabled auditd
 sudo systemctl start auditd
 ```
 
-4. Restart SSH Service
+4. Create a cusom banner file /etc/ssh/sshd-banner)
+   > [!NOTE]
+   > That will be displayed when someone tries to log in via SSH, In The SSH configuration file /etc/ssh/sshd_config, We set two importants things:
+
+- Prevents direct login as root via SSH
+- pointing the specifies the file path of banner that will be displayed
+
+a. Edit and Adding the configuration
+
+```bash
+PemritRootLogin no
+```
+
+and adding
+
+```bash
+Banner /etc/ssh/sshd-banner
+```
+
+> [!NOTE]
+> Check the file sshd-banner for the example notification message
+
+. Restart SSH Service
 
 ```bash
 sudo systemctl restart sshd or sshd.service
