@@ -146,7 +146,36 @@ Banner /etc/ssh/sshd-banner
 > [!NOTE]
 > Check the file sshd-banner for the example notification message
 
-. Restart SSH Service
+# Dynamic MOTD access SSH
+
+1. Create Scripts File
+
+```bash
+sudo nano /etc/update-motd.d/Custom-Dynamic-MOTD
+```
+
+2. Check my script file
+
+3. Make Script file to be executable
+
+```bash
+sudo chmod +x /etc/Custom-Dynamic-MOTD
+```
+
+4. Make sure dynamic MOTD already active on PAM
+
+```bash
+sudo nano /etc/pam.d/sshd
+```
+
+Ensure the following line is not commented
+
+```bash
+session    optional     pam_motd.so  motd=/run/motd.dynamic
+```
+
+> [!NOTE]
+> Don't forget ot Restart SSH Service after made a change
 
 ```bash
 sudo systemctl restart sshd or sshd.service
